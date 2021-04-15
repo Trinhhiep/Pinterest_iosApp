@@ -10,6 +10,9 @@ import UIKit
 class DetailViewController: UIViewController {
     var myImage : UIImage?
     @IBOutlet weak var imgDetail: UIImageView!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imgDetail.image = myImage
@@ -17,6 +20,12 @@ class DetailViewController: UIViewController {
     }
     
 
+    @IBAction func handlePinch(_ sender: UIPinchGestureRecognizer) {
+        if let view = sender.view {
+          view.transform = view.transform.scaledBy(x: sender.scale, y: sender.scale)
+            sender.scale = 1
+        }
+    }
     /*
     // MARK: - Navigation
 

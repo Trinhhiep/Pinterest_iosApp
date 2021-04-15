@@ -19,7 +19,7 @@ class PinterestLayout: UICollectionViewLayout {
     weak var delegate: PinterestLayoutDelegate?
 
     // 2
-    private let numberOfColumns = 3
+    private let numberOfColumns = ViewController.numberOfColunm
     private let cellPadding: CGFloat = 4
 
     // 3
